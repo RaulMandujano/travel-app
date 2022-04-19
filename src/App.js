@@ -2,19 +2,17 @@ import React from 'react';
 import './App.css';
 
 import SimpleBottomNavigation from './components/SimpleBottomNavigation';
-import SearchAppBar from './components/SearchAppBar';
+import SearchBar from './components/SearchBar';
 import RecipeReviewCard from './components/RecipeReviewCard';
-import CalendarPicker from '@mui/x-date-pickers/CalendarPicker';
 
 function App() {
 
 
   return (
     <>
-    <SearchAppBar />
+    <SearchBar />
     <SimpleBottomNavigation />
     <RecipeReviewCard />
-    <CalendarPicker />
     </>
   );
 }
