@@ -1,19 +1,36 @@
 .search {
     position: absolute;
-    top: 20%;
-    left: 25%;
+    top: 13rem;
     width: 100vw;
 }
 
-.search > h2 {
+
+.input-guest{
     display: flex;
+    background-color: #ff7779;
+    width: 596px;
+}
+
+.input-guest h2{
+    color: white;
+    margin: 13px auto;
+    font-size: 12px;
+}
+
+.input-guest input{
+    width: 50%;
+    text-align: center;
+    border: 1px solid #ff7779;
+}
+
+.search > h2 {
     align-items: center;
     justify-content: space-between;
     width: 559px;
     padding: 10px;
     background-color: white;
     position: absolute;
-    left: 0;
+    margin: auto 15px;
 }
 
 .search > input {
@@ -23,7 +40,7 @@
     left: 0;
     height: 1px;
     width: 559px;
-    top: 420px;
+    top: 490px;
 }
 
 .search > input:focus {
@@ -44,4 +61,12 @@
 .search > button:hover {
     background-color: white;
     color: #ff7779;
+    border: 1px solid #ff7779;
+}
+
+.search-input{
+    width: 576px;
+    height: 3rem;
+    text-align: center;
+    border: 1px solid #ff7779;
 }

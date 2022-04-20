@@ -1,4 +1,10 @@
 /* Search Button  */
+.banner {
+  width: 585px;
+  margin: auto;
+  margin-top: 2%;
+}
+
 Button.banner_searchButton {
     background-color: #ff7779;
     text-transform: inherit;
@@ -11,7 +17,8 @@ Button.banner_searchButton {
     border: 1px solid #ff7779;
   }
   
-  .banner_search {
+  div.banner_search {
     display: flex;
     flex-direction: column;
+    color: #ff7779;
   }
