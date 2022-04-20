@@ -1,0 +1,17 @@
+/* Search Button  */
+Button.banner_searchButton {
+    background-color: #ff7779;
+    text-transform: inherit;
+    color: white;
+    border: 1px solid #ff7779;
+  }
+
+  Button.banner_searchButton:hover {
+    color: #ff7779;
+    border: 1px solid #ff7779;
+  }
+  
+  .banner_search {
+    display: flex;
+    flex-direction: column;
+  }

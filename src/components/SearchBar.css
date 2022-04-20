@@ -1,5 +1,10 @@
+.box{
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
 .box input[type=text] {
-  width: 15%;
+  width: 45%;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -13,15 +18,15 @@
 }
 
 .box button{
-  width: 5%;
+  width: 15%;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
   background-color: white;
   background-position: 10px 10px; 
-  padding: 12px 10px 12px 10px;
-  background-color: darkred;
+  padding: 13px 10px 13px 10px;
+  background-color: gray;
   color: white;
 }
 .box button:hover{
@@ -30,5 +35,5 @@
 
 /* When the input field gets focus, change its width to 100% */
 .box input[type=text]:focus {
-  width: 40%;
+  width: 85%;
 }
