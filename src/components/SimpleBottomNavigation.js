@@ -11,7 +11,7 @@ export default function SimpleBottomNavigation() {
 
   return (
     <Box sx={{ width: 500 }}>
-      <BottomNavigation
+      <BottomNavigation sx={{ borderRadius: 3, marginTop: 5, marginBottom: 3, }}
         showLabels
         value={value}
         onChange={(event, newValue) => {
