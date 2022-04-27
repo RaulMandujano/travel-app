@@ -1,6 +1,6 @@
 import authHeader from "./authHeader";
 
-export default (params) => {
+export default (params = {}) => {
 
     let url = 'https://airbnb13.p.rapidapi.com/search-location'
 
@@ -16,10 +16,7 @@ export default (params) => {
         headers: authHeader,
     };
 
-    console.log(params);
 
-    fetch(url, options)
+    return fetch(url, options)
         .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
 }

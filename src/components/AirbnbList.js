@@ -1,61 +1,37 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import ButtonBase from '@mui/material/ButtonBase';
 
-const Img = styled('img')({
-  margin: 'auto',
-  display: 'block',
-  maxWidth: '100%',
-  maxHeight: '100%',
-});
+import "../components/AirbnbList.css";
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import StarIcon from '@mui/icons-material/Star';
 
 export default function ComplexGrid(props) {
   return (
-    <Paper
-      sx={{
-        p: 2,
-        margin: 'auto',
-        maxWidth: 500,
-        flexGrow: 1,
-        backgroundColor: (theme) =>
-          theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-      }}
-    >
-      <Grid container spacing={2}>
-        <Grid item>
-          <ButtonBase sx={{ width: 128, height: 128 }}>
-            <Img alt="complex" src="/static/images/grid/complex.jpg" />
-          </ButtonBase>
-        </Grid>
-        <Grid item xs={12} sm container>
-          <Grid item xs container direction="column" spacing={2}>
-            <Grid item xs>
-              <Typography gutterBottom variant="subtitle1" component="div">
-                Standard license
-              </Typography>
-              <Typography variant="body2" gutterBottom>
-                Full resolution 1920x1080 • JPEG
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                ID: 1030114
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography sx={{ cursor: 'pointer' }} variant="body2">
-                Remove
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid item>
-            <Typography variant="subtitle1" component="div">
-              $19.00
-            </Typography>
-          </Grid>
-        </Grid>
-      </Grid>
-    </Paper>
+    <>
+    <div className="searchResult" onClick={props.onClick}>
+        <img src={props.images[0]} alt={props.title} />
+        <FavoriteBorderIcon className="searchResult__heart" />
+        <div className="searchResult__info">
+            <div className="searchResult__infoTop">
+                <span>{props.address}</span>
+                <h3>{props.name}</h3>
+                <p>____</p>
+                <p>Guest: {props.persons} Persons</p>
+
+                  <p>Amenities:</p>
+                <p>{props.previewAmenities[0]}, {props.previewAmenities[1]}, {props.previewAmenities[2]}</p>
+            </div>
+            <div className="searchResult__infoBottom">
+                <div className="searchResult__stars">
+                    <StarIcon className="searchResult__star" fontSize="small" />
+                    <p><strong>{props.rating}</strong></p>
+                </div>
+                <div className="searchResult__price">
+                    <h3>{props.price.priceItems[0].title}</h3>
+                    <p>{`$${props.price.total} total`}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </>
   );
 }

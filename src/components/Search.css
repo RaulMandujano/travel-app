@@ -1,7 +1,8 @@
 .search {
     position: absolute;
-    top: 13rem;
+    top: 12rem;
     width: 100vw;
+    z-index: 2;
 }
 
 
@@ -50,7 +51,7 @@
 .search > button {
     position: absolute;
     left: 0;
-    top: 480px;
+    top: 445px;
     text-transform: inherit;
     background-color: #ff7779;
     color: white;

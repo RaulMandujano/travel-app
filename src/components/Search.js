@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
@@ -9,7 +9,7 @@ import getLocation from '../apis/getLocation';
 import { DateRangePicker } from 'react-date-range';
 import Button from '@mui/material/Button';
 
-const Search = () => {
+const Search = (props) => {
     const [startDate, setStartDate] = useState(new Date());
 
     const tomorrow = new Date();
@@ -36,12 +36,18 @@ const Search = () => {
         getLocation({
             checkin: startDate.toISOString().split('T')[0],
             checkout: endDate.toISOString().split('T')[0],
-            location: location.value, adults: adults.value,
+            location: location.value, 
+            adults: adults.value,
             children: '0',
             infants: '0',
             page: '1'
         })
+        .then(res => props.onPlacesFetch(res.results))
     }
+
+    useEffect(() => {
+        
+    })
 
     return (
         <form className="search" onSubmit={onSubmit}>

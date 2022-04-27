@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
+import Grid from '@mui/material/Grid';
 
 import SimpleBottomNavigation from './components/SimpleBottomNavigation';
 import Banner from './components/Banner';
-import Grid from '@mui/material/Grid';
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
 <SimpleBottomNavigation />
 
 <Banner />
+
 
     </Grid>
   );
