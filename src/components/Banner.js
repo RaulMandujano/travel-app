@@ -8,6 +8,7 @@ import AirbnbList from '../components/AirbnbList';
 
 import Search from '../components/Search';
 import getLocation from "../apis/getLocation";
+import getFavorites from "../util/getFavorites";
 
 const style = {
     position: 'absolute',
@@ -33,7 +34,6 @@ const Banner = () => {
 
         const afterWeekDate = new Date();
         afterWeekDate.setDate(afterWeekDate.getDate() + 7);
-
         getLocation({
             checkin: new Date().toISOString().split('T')[0],
             checkout: afterWeekDate.toISOString().split('T')[0],

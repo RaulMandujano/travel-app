@@ -5,9 +5,11 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import HomeIcon from '@mui/icons-material/Home';
+import { useNavigate } from 'react-router-dom';
 
 export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
+  const navigate = useNavigate()
 
   return (
     <Box sx={{ width: 500 }}>
@@ -18,8 +20,8 @@ export default function SimpleBottomNavigation() {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+        <BottomNavigationAction onClick={() => navigate('/')} label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction onClick={() => navigate('/favorites')} label="Favorites" icon={<FavoriteIcon />} />
         <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
       </BottomNavigation>
     </Box>

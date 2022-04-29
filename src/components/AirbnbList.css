@@ -21,6 +21,10 @@
     top: 20px;
 }
 
+.searchResult__heart:hover {
+    color: red;
+}
+
 .searchResult img {
     max-width: 350px;
     width: 100%;
