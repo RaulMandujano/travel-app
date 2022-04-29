@@ -1,0 +1,45 @@
+.onecard{
+    width: 100%;
+    position: relative;
+    border: 0px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.onecard img{
+    width: 100%;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+.onecard__info{
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    color: white;
+    width: 34%;
+}
+
+.onecard__info > span {
+    display: block;
+    font-size: 2.5vw;
+    font-weight: 600;
+}
+
+.onecard__info > p {
+    margin-top: 12px;
+    font-size: 0.8vw;
+}
+
+.onecard__info > button {
+    margin-top: 30px;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.8vw; 
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}

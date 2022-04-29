@@ -1,0 +1,27 @@
+.card {
+    margin: 10px;
+    border: 0px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+}
+
+.card:hover{
+    transform: scale(1.03)
+}
+
+.card img {
+    width: 100%;
+}
+
+.card__info {
+    padding: 8px 0px;
+}
+.card__info h3 {
+    font-weight: 500;
+}
+
+.card__info p{
+   text-align: justify;
+}

@@ -4,9 +4,9 @@ import Button from '@mui/material/Button';
 import '../components/Banner.css';
 import { Modal, Box, Typography } from '@mui/material'
 
-import AirbnbList from '../components/AirbnbList';
+import AirbnbList from './AirbnbList';
 
-import Search from '../components/Search';
+import Search from './Search';
 import getLocation from "../apis/getLocation";
 import getFavorites from "../util/getFavorites";
 

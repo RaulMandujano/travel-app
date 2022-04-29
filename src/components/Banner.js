@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import '../components/Banner.css';
 import { Modal, Box, Typography } from '@mui/material'
 
+
 import AirbnbList from '../components/AirbnbList';
 
 import Search from '../components/Search';
@@ -59,6 +60,13 @@ const Banner = () => {
                     <Button onClick={() => setShowSearch(!showSearch)} className="banner_searchButton" variant="outlined">
                         {showSearch ? "Hide" : "Search Place"}
                     </Button>
+
+                    <div className="banner__info">
+                        <h2>Go</h2>
+                        <h2>Near</h2>
+                        <Button className="banner__infoBtn" variant="outlined">Explore Nearby Stays</Button>
+                    </div>
+
                 </div>
             </div>
             {places.map((place, index) => (

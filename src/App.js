@@ -2,10 +2,13 @@ import React from 'react';
 import './App.css';
 import Grid from '@mui/material/Grid';
 
-import SimpleBottomNavigation from './components/SimpleBottomNavigation';
+import Header from './components/Header';
+// import SimpleBottomNavigation from './components/SimpleBottomNavigation';
 import Banner from './components/Banner';
+
 import { Routes, Route } from 'react-router-dom';
 import Favorites from './components/Favorites';
+import Home from './components/Home';
 
 function App() {
 
@@ -13,11 +16,14 @@ function App() {
   return (
     <Grid container justify="center" alignItems="center" direction="column" className="page">
 
-      <SimpleBottomNavigation />
+      <Header />
+      {/* <SimpleBottomNavigation /> */}
       <Routes>
         <Route path='/' element={<Banner />} />
         <Route path='/favorites' element={<Favorites />} />
       </Routes>
+
+      <Home />
 
 
     </Grid>
