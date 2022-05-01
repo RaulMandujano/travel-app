@@ -38,6 +38,7 @@ export default function Form(props) {
 
   return (
     <>
+
       <div className="searchResult" onClick={props.onClick}>
         <img src={props.images[0]} alt={props.title} />
         <FavoriteIcon className="searchResult__heart" onClick={createList} />

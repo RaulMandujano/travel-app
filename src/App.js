@@ -19,7 +19,8 @@ function App() {
       <Header />
       {/* <SimpleBottomNavigation /> */}
       <Routes>
-        <Route path='/' element={<Banner />} />
+        <Route path='/explore' element={<Banner />} />
+        <Route path='/nearby' element={<Banner />} />
         <Route path='/favorites' element={<Favorites />} />
       </Routes>
 

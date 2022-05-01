@@ -19,7 +19,8 @@ const Header = ()=> {
 
     return(
         <div className="header">
-            <Link to="/"><img className="header__icon" src="https://www.stickpng.com/img/download/580b57fcd9996e24bc43c513/image" alt="logo"/></Link>
+            <Link to="/"><img className="header__icon" src="/App-logos/App-logos_transparent.png" alt="logo"/></Link>
+            
             <div className="header__center">
                 <Box sx={{ width: 500 }}>
                     <BottomNavigation sx={{ border: "none", }}
@@ -29,12 +30,15 @@ const Header = ()=> {
                     setValue(newValue);
                     }}
                 >
-                <BottomNavigationAction onClick={() => navigate('/')} label="Home" icon={<HomeIcon />} />
+                    
+                <BottomNavigationAction onClick={() => navigate('/explore')} label="Explore" icon={<HomeIcon />} />
+                <BottomNavigationAction onClick={() => navigate('/nearby')} label="Near by" icon={<HomeIcon />} />
                 <BottomNavigationAction onClick={() => navigate('/favorites')} label="Favorites" icon={<FavoriteIcon />} />
                 {/* <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} /> */}
                 </BottomNavigation>
                 </Box>
             </div>
+            
             <div className="header__right">
 
                 <LanguageIcon />
