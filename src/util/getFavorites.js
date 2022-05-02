@@ -1,5 +1,4 @@
 import { getCollection } from "./db";
-import { getDocs } from "firebase/firestore";
 
 const getFavorites = () => {
     return getCollection('lists')

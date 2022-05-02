@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import "../components/AirbnbList.css";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import StarIcon from '@mui/icons-material/Star';
-import { addDOC, removeDOC, setDOC } from '../util/db';
+import { removeDOC, setDOC } from '../util/db';
 
 export default function Form(props) {
 
