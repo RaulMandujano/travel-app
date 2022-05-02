@@ -7,7 +7,6 @@ import { Modal, Box, Typography } from '@mui/material'
 import AirbnbList from './AirbnbList';
 
 import Search from './Search';
-// import getLocation from "../apis/getLocation";
 import getFavorites from "../util/getFavorites";
 
 const style = {

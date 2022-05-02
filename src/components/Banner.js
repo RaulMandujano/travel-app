@@ -9,7 +9,6 @@ import AirbnbList from '../components/AirbnbList';
 
 import Search from '../components/Search';
 import getLocation from "../apis/getLocation";
-// import getFavorites from "../util/getFavorites";
 import { useLocation, useSearchParams } from 'react-router-dom';
 
 const style = {
@@ -79,9 +78,9 @@ const Banner = () => {
 
     }, [location.pathname])
 
-
     return (
         <>
+            {/* <GoogleMaps /> */}
             <datalist id='places'>
                 {places.map(place => <option value={place.type} key={place.id} />)}
             </datalist>
@@ -103,9 +102,13 @@ const Banner = () => {
                 </div>
             </div>
             <TextField label='Filters' defaultValue={selectedPlace} inputProps={{ list: 'places' }} onChange={e => setSelectedPlace(e.target.value)} />
-            {places.map((place, index) => place.type.toLowerCase().includes(selectedPlace.toLowerCase()) && (
-                <AirbnbList {...place} key={index} onClick={() => setSelectedPlaceIndex(index)} />
-            ))}
+            {places.map((place, index) => {
+                const type = place.type;
+                const isExist = type && type.toLowerCase().includes(selectedPlace.toLowerCase())
+                return isExist && (
+                    <AirbnbList {...place} key={index} onClick={() => setSelectedPlaceIndex(index)} />
+                )
+            })}
 
 
             {place && (
