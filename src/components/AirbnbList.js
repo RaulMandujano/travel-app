@@ -20,14 +20,14 @@ export default function Form(props) {
     }
     else {
       const data = {
-        name: props.name,
-        address: props.address,
-        images: props.images,
-        persons: props.persons,
-        previewAmenities: props.previewAmenities,
-        rating: props.rating,
-        price: props.price,
-        path: `lists/${props.id}`
+        name: props.name || '',
+        address: props.address || '',
+        images: props.images || '',
+        persons: props.persons || '',
+        previewAmenities: props.previewAmenities || '',
+        rating: props.rating || '',
+        price: props.price || '',
+        path: `lists/${props.id}` || '',
       }
       setDOC(data)
         .then(res => console.log(res))

@@ -9,6 +9,9 @@ import AirbnbList from './AirbnbList';
 import Search from './Search';
 import getFavorites from "../util/getFavorites";
 
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+
 const style = {
     position: 'absolute',
     top: '50%',
@@ -63,14 +66,19 @@ const Favorites = () => {
                     aria-labelledby="modal-modal-title"
                     aria-describedby="modal-modal-description"
                 >
-                    <Box sx={style}>
-                        <Typography id="modal-modal-title" variant="h6" component="h2">
-                            {place.name}
-                        </Typography>
-                        <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                        </Typography>
-                    </Box>
+                <Box sx={{ width: 700, height: 1000, overflowY: 'scroll', margin:"auto" }}>
+                    <ImageList variant="masonry" cols={1} gap={8}>
+                        {place.images.map((image, index) => (
+                        <ImageListItem key={index}>
+                            <img
+                            src={image}
+                            alt="image"
+                            loading="lazy"
+                            />
+                        </ImageListItem>
+                        ))}
+                    </ImageList>
+                </Box>
                 </Modal>
             )}
 

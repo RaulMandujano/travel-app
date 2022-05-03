@@ -12,22 +12,22 @@ const Home = () => {
       <div className="home__section">
             <Card
                 src="https://a0.muscache.com/im/pictures/7d82ca14-56e5-4465-8218-dcfa7d69b6ac.jpg?im_w=720"
-                title="Entire homes"
+                title="Entire rental unit"
                 description="Comfortable private places, with room for friends or family."
             />
             <Card
                 src="https://a0.muscache.com/im/pictures/36f53e61-db8d-403c-9122-5b761c0e4264.jpg?im_w=720"
-                title="Unique stays"
+                title="Entire townhouse"
                 description="Spaces that are more than just a place to sleep."
             />
             <Card
                 src="https://a0.muscache.com/im/pictures/a596c528-a2e9-4417-9bbe-ceb68b2f6b9c.jpg?im_w=720"
-                title="Cabins and Cottages"
+                title="Room in aparthotel"
                 description="Unique activities we can do together, led by a world of hosts."
             />
             <Card
                 src="https://a0.muscache.com/im/pictures/10a638e1-6aff-4313-8033-1275cec83987.jpg?im_w=720"
-                title="Pets allowed"
+                title="Entire serviced apartment"
                 description="Travel around the world with your Pet"
             />
       </div>
