@@ -72,7 +72,7 @@ const Favorites = () => {
                         <ImageListItem key={index}>
                             <img
                             src={image}
-                            alt="image"
+                            alt={image}
                             loading="lazy"
                             />
                         </ImageListItem>
