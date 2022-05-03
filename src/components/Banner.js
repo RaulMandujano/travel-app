@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import Button from '@mui/material/Button';
 import '../components/Banner.css';
-import { Modal, Box, Typography, TextField } from '@mui/material'
+import { Modal, Box, TextField } from '@mui/material'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
@@ -13,17 +13,17 @@ import Search from '../components/Search';
 import getLocation from "../apis/getLocation";
 import { useLocation, useSearchParams } from 'react-router-dom';
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-};
+// const style = {
+//     position: 'absolute',
+//     top: '50%',
+//     left: '50%',
+//     transform: 'translate(-50%, -50%)',
+//     width: 400,
+//     bgcolor: 'background.paper',
+//     border: '2px solid #000',
+//     boxShadow: 24,
+//     p: 4,
+// };
 
 const Banner = () => {
 

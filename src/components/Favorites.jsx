@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import Button from '@mui/material/Button';
 import '../components/Banner.css';
-import { Modal, Box, Typography } from '@mui/material'
+import { Modal, Box } from '@mui/material'
 
 import AirbnbList from './AirbnbList';
 
@@ -12,17 +12,17 @@ import getFavorites from "../util/getFavorites";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-};
+// const style = {
+//     position: 'absolute',
+//     top: '50%',
+//     left: '50%',
+//     transform: 'translate(-50%, -50%)',
+//     width: 400,
+//     bgcolor: 'background.paper',
+//     border: '2px solid #000',
+//     boxShadow: 24,
+//     p: 4,
+// };
 
 const Favorites = () => {
 
